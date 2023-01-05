@@ -29,12 +29,16 @@ class _ScreenSplashState extends State<ScreenSplash> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset(
-          'assets/images/kseb.jpg',
-          fit: BoxFit.fill,
-          // width: 200,
-        ),
+      body: Column(
+        children: [
+          Center(
+            child: Image.asset(
+              'assets/images/kseb.jpg',
+              fit: BoxFit.fill,
+            ),
+          
+          ),
+        ],
       ),
     );
   }

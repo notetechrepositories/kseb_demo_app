@@ -50,6 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                 border: Border.all(
                   color: Colors.white,
                 ),
+                borderRadius: BorderRadius.circular(12),
               ),
               child: TextField(
                 decoration: InputDecoration(

@@ -18,26 +18,30 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(children: [
           //hello textfield
 
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
 
-          Text(
+          const Text(
             "Hello Again!",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 24,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
 
-          Text(
+          const Text(
             "Welcome Back , You\'ve been missed!",
             style: TextStyle(
               fontSize: 20,
             ),
+          ),
+
+          SizedBox(
+            height: 30,
           ),
 
           //email textfield
@@ -52,19 +56,67 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: const TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none, hintText: 'Email'),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+
+          //phonenumber tetxfield
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                border: Border.all(
+                  color: Colors.white,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: const TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none, hintText: 'Phone'),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          //password textfield
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                border: Border.all(
+                  color: Colors.white,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: const TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none, hintText: 'Password'),
                 ),
               ),
             ),
           ),
 
-          //phonenumber tetxfield
-
-          //password textfield
-
           //sign in button
+          
 
           //register button( not a member? register now)
         ]),

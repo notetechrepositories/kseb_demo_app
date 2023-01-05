@@ -4,6 +4,8 @@ import 'package:ksec_login/login_page.dart';
 
 import 'splash.dart';
 
+const SAVE_KEY_NAME = 'UserLoggedIn';
+
 void main(List<String> args) {
   runApp(const MyApp());
 }

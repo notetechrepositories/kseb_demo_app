@@ -29,16 +29,24 @@ class _ScreenSplashState extends State<ScreenSplash> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Center(
-            child: Image.asset(
+      backgroundColor: Colors.green[700],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // logo here
+            Image.asset(
               'assets/images/kseb.jpg',
-              fit: BoxFit.fill,
+              height: 200,
             ),
-          
-          ),
-        ],
+            SizedBox(
+              height: 20,
+            ),
+            CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            )
+          ],
+        ),
       ),
     );
   }

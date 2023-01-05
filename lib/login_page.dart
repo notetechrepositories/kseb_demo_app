@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
 
           Text(
-            "Welcome Back , You\'ve been missed",
+            "Welcome Back , You\'ve been missed!",
             style: TextStyle(
               fontSize: 20,
             ),
@@ -42,8 +42,21 @@ class _LoginPageState extends State<LoginPage> {
 
           //email textfield
 
-          TextField(
-            decoration: InputDecoration(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                border: Border.all(
+                  color: Colors.white,
+                ),
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
           ),
 
           //phonenumber tetxfield

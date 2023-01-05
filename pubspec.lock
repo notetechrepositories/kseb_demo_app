@@ -226,6 +226,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.2"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 144ff7ef82f4453037c707420e2f9ac45c33b85b
   shared_value:
     dependency: "direct main"
     description:
@@ -240,6 +244,11 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.1"
+<<<<<<< HEAD
+=======
+>>>>>>> 6cb143e90a6ae9ddcd05ba62c184691ccd99194d
+=======
+>>>>>>> 144ff7ef82f4453037c707420e2f9ac45c33b85b
   sky_engine:
     dependency: transitive
     description: flutter

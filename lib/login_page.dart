@@ -127,15 +127,25 @@ class _LoginPageState extends State<LoginPage> {
                   color: Colors.deepPurple,
                   borderRadius: BorderRadius.circular(25)),
               child: Center(
-                child: Text(
-                  'Sign In',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                ),
-              ),
+                  child:
+                      // Text(
+                      //   'Sign In',
+                      //   style: TextStyle(
+                      //     color: Colors.white,
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 18,
+                      //   ),
+                      // ),
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Sign In",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ))),
             ),
           ),
 
@@ -163,7 +173,10 @@ class _LoginPageState extends State<LoginPage> {
           //   ),
 
           // )
-          TextButton(onPressed: () {}, child: Text("Register Now"))
+          TextButton(
+            onPressed: () {},
+            child: Text("Register Now"),
+          ),
         ]),
       ),
     );

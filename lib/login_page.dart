@@ -154,13 +154,16 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ],
           ),
-          const Text(
-            "Register now",
-            style: TextStyle(
-              color: Colors.blue,
-              fontWeight: FontWeight.bold,
-            ),
-          )
+          // const Text(
+          //   "Register now",
+          //   style: TextStyle(
+          //     color: Colors.blue,
+          //     fontWeight: FontWeight.bold,
+
+          //   ),
+
+          // )
+          TextButton(onPressed: () {}, child: Text("Register Now"))
         ]),
       ),
     );

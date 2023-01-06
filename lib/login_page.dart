@@ -66,33 +66,33 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 10,
           ),
 
           //phonenumber tetxfield
 
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                border: Border.all(
-                  color: Colors.white,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20.0),
-                child: const TextField(
-                  decoration: InputDecoration(
-                      border: InputBorder.none, hintText: 'Phone'),
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          //   child: Container(
+          //     decoration: BoxDecoration(
+          //       color: Colors.grey[200],
+          //       border: Border.all(
+          //         color: Colors.white,
+          //       ),
+          //       borderRadius: BorderRadius.circular(12),
+          //     ),
+          //     child: Padding(
+          //       padding: const EdgeInsets.only(left: 20.0),
+          //       child: const TextField(
+          //         decoration: InputDecoration(
+          //             border: InputBorder.none, hintText: 'Phone'),
+          //       ),
+          //     ),
+          //   ),
+          // ),
+          // SizedBox(
+          //   height: 10,
+          // ),
           //password textfield
 
           Padding(
@@ -108,15 +108,41 @@ class _LoginPageState extends State<LoginPage> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: const TextField(
+                  obscureText: true,
                   decoration: InputDecoration(
                       border: InputBorder.none, hintText: 'Password'),
                 ),
               ),
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
 
           //sign in button
-          
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(25)),
+              child: Center(
+                child: Text(
+                  'Sign In',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          SizedBox(
+            height: 10,
+          ),
 
           //register button( not a member? register now)
         ]),

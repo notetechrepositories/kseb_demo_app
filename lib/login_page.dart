@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,18 +16,21 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: Center(
-        child: Column(children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Icon(
+            Icons.phone_android,
+            size: 100,
+          ),
           //hello textfield
 
           const SizedBox(
-            height: 20,
+            height: 75,
           ),
 
-          const Text(
+          Text(
             "Hello Again!",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
+            style: GoogleFonts.bebasNeue(
+              fontSize: 52,
             ),
           ),
           const SizedBox(
@@ -41,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
 
           SizedBox(
-            height: 30,
+            height: 50,
           ),
 
           //email textfield
@@ -141,7 +145,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
 
           SizedBox(
-            height: 10,
+            height: 25,
           ),
 
           //register button( not a member? register now)

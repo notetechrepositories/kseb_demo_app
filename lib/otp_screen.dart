@@ -15,11 +15,11 @@ class _otpScreenState extends State<otpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.white,
-        ),
+        // centerTitle: true,
+        // leading: Icon(
+        //   Icons.arrow_back,
+        //   color: Colors.white,
+        // ),
         title: Text("Verify Screen"),
         backgroundColor: Colors.blue,
       ),

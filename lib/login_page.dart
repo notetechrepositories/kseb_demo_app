@@ -112,6 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                 fillColor: Colors.grey[200],
                 filled: true,
               ),
+              obscureText: true,
             ),
           ),
           SizedBox(

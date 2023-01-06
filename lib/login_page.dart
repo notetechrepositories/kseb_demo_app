@@ -145,6 +145,23 @@ class _LoginPageState extends State<LoginPage> {
           ),
 
           //register button( not a member? register now)
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Not a member?",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          Text(
+            "Register now",
+            style: TextStyle(
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+            ),
+          )
         ]),
       ),
     );

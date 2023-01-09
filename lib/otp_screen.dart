@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import 'ScreenHome.dart';
+
 class otpScreen extends StatefulWidget {
   const otpScreen({super.key});
 
@@ -115,7 +117,10 @@ class _otpScreenState extends State<otpScreen> {
       bottomSheet: Padding(
           padding: const EdgeInsets.all(10),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: ((context) => ScreenHome())));
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

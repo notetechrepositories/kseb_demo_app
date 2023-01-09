@@ -109,7 +109,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 100,
+                  height: 90,
                 ),
                 FadeInDown(
                   child: MaterialButton(
@@ -136,7 +136,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 FadeInDown(
                   child: Row(

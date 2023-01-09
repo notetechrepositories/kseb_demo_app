@@ -33,6 +33,8 @@ dependencies:
   google_fonts:
   flutter:
     sdk: flutter
+  intl_phone_number_input: ^0.7.1
+  flutter_animator: ^3.2.2
   shared_preferences: ^2.0.15
   shared_value: ^3.0.0
   sharedpreference: ^0.0.1

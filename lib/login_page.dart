@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ksec_login/otp_screen.dart';
 
+import 'register.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -178,7 +180,7 @@ class _LoginPageState extends State<LoginPage> {
           TextButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => otpScreen())));
+                  MaterialPageRoute(builder: ((context) => RegisterScreen())));
             },
             child: Text("Register Now"),
           ),

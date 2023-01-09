@@ -37,7 +37,8 @@ class _ScreenSplashState extends State<ScreenSplash> {
             // logo here
             Image.asset(
               'assets/images/kseb.jpg',
-              height: 200,
+              width: MediaQuery.of(context).size.width * 0.3,
+              height: MediaQuery.of(context).size.height * 0.3,
             ),
             SizedBox(
               height: 20,

@@ -156,7 +156,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             );
                           },
-                          child: Text("Logiin"))
+                          child: Text("Login"))
                     ],
                   ),
                 )

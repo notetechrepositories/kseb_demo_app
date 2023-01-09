@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ksec_login/otp_screen.dart';
 
+import 'ScreenHome.dart';
 import 'register.dart';
 
 class LoginPage extends StatefulWidget {
@@ -141,7 +142,14 @@ class _LoginPageState extends State<LoginPage> {
                       //   ),
                       // ),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ScreenHome(),
+                              ),
+                            );
+                          },
                           child: Text(
                             "Sign In",
                             style: TextStyle(

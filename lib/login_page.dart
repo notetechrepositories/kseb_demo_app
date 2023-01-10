@@ -252,13 +252,15 @@ class _LoginPageState extends State<LoginPage> {
           //   ),
 
           // )
-          TextButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => RegisterScreen())));
-            },
-            child: Text("Register Now"),
-          ),
+
+// registration page
+          // TextButton(
+          //   onPressed: () {
+          //     Navigator.push(context,
+          //         MaterialPageRoute(builder: ((context) => RegisterScreen())));
+          //   },
+          //   child: Text("Register Now"),
+          // ),
         ]),
       ),
     );

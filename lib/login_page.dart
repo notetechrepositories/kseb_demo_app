@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_animator/flutter_animator.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:ksec_login/otp_screen.dart';
 
 import 'ScreenHome.dart';
@@ -54,71 +56,136 @@ class _LoginPageState extends State<LoginPage> {
 
           //email textfield
 
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: TextField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.circular(12)),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.deepPurple),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                hintText: 'Email',
-                fillColor: Colors.grey[200],
-                filled: true,
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          //   child: TextField(
+          //     decoration: InputDecoration(
+          //       enabledBorder: OutlineInputBorder(
+          //           borderSide: BorderSide(color: Colors.white),
+          //           borderRadius: BorderRadius.circular(12)),
+          //       focusedBorder: OutlineInputBorder(
+          //         borderSide: BorderSide(color: Colors.deepPurple),
+          //         borderRadius: BorderRadius.circular(12),
+          //       ),
+          //       hintText: 'Email',
+          //       fillColor: Colors.grey[200],
+          //       filled: true,
+          //     ),
+          //   ),
+          // ),
           SizedBox(
             height: 10,
           ),
 
           //phonenumber tetxfield
+          FadeInDown(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                      color: Color(0xffeeeeee),
+                      blurRadius: 10,
+                      offset: Offset(0, 4))
+                ],
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(
+                  color: Colors.black.withOpacity(
+                    0,
+                  ),
+                ),
+              ),
+              child: Stack(
+                children: [
+                  InternationalPhoneNumberInput(
+                    onInputChanged: (value) {},
+                    cursorColor: Colors.black,
+                    formatInput: false,
+                    selectorConfig: SelectorConfig(
+                        selectorType: PhoneInputSelectorType.BOTTOM_SHEET),
+                    inputDecoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(bottom: 15, left: 0),
+                      border: InputBorder.none,
+                      hintText: "phone number",
+                      hintStyle:
+                          TextStyle(color: Colors.grey.shade500, fontSize: 16),
+                    ),
+                  ),
+                  Positioned(
+                      left: 90,
+                      top: 8,
+                      bottom: 8,
+                      child: Container(
+                        height: 40,
+                        width: 1,
+                        color: Colors.black.withOpacity(0.13),
+                      ))
+                ],
+              ),
+            ),
+          ),
+          FadeInDown(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                      color: Color(0xffeeeeee),
+                      blurRadius: 10,
+                      offset: Offset(0, 4))
+                ],
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(
+                  color: Colors.black.withOpacity(
+                    0,
+                  ),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12)),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.deepPurple),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    hintText: 'Email',
+                    fillColor: Colors.grey[200],
+                    filled: true,
+                  ),
+                ),
+              ),
+            ),
+          ),
+//name
+          SizedBox(
+            height: 10,
+          ),
+          //password textfield
 
           // Padding(
           //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-          //   child: Container(
-          //     decoration: BoxDecoration(
-          //       color: Colors.grey[200],
-          //       border: Border.all(
-          //         color: Colors.white,
+          //   child: TextField(
+          //     decoration: InputDecoration(
+          //       enabledBorder: OutlineInputBorder(
+          //           borderSide: BorderSide(color: Colors.white),
+          //           borderRadius: BorderRadius.circular(12)),
+          //       focusedBorder: OutlineInputBorder(
+          //         borderSide: BorderSide(color: Colors.deepPurple),
+          //         borderRadius: BorderRadius.circular(12),
           //       ),
-          //       borderRadius: BorderRadius.circular(12),
+          //       hintText: 'Password',
+          //       fillColor: Colors.grey[200],
+          //       filled: true,
           //     ),
-          //     child: Padding(
-          //       padding: const EdgeInsets.only(left: 20.0),
-          //       child: const TextField(
-          //         decoration: InputDecoration(
-          //             border: InputBorder.none, hintText: 'Phone'),
-          //       ),
-          //     ),
+          //     obscureText: true,
           //   ),
           // ),
-          // SizedBox(
-          //   height: 10,
-          // ),
-          //password textfield
-
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: TextField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.circular(12)),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.deepPurple),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                hintText: 'Password',
-                fillColor: Colors.grey[200],
-                filled: true,
-              ),
-              obscureText: true,
-            ),
-          ),
           SizedBox(
             height: 10,
           ),
@@ -146,7 +213,7 @@ class _LoginPageState extends State<LoginPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ScreenHome(),
+                                builder: (context) => otpScreen(),
                               ),
                             );
                           },

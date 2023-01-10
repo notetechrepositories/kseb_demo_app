@@ -25,14 +25,15 @@ class _otpScreenState extends State<otpScreen> {
         title: Text("Verify Screen"),
         backgroundColor: Colors.blue,
       ),
+      
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             Container(
               alignment: Alignment.center,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Text(
                   "Otp sent to 9072405777",
                   style: TextStyle(color: Colors.black, fontSize: 20),
@@ -40,7 +41,7 @@ class _otpScreenState extends State<otpScreen> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 60,
             ),
             Form(
                 child: Row(

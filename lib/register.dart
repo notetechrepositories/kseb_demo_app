@@ -29,8 +29,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
               children: [
                 Image.network(
                   "https://play-lh.googleusercontent.com/e9ZxHG4zvXjJAxXEXsgPQdc2XRf7mIrZmdVdHoEzFfq-NAphV1AWwimvoOKWSBNBXA",
-                  width: 200,
-                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.height * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.3,
                 ),
                 SizedBox(
                   height: 60,
@@ -77,6 +77,83 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
                     ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.white),
+                              borderRadius: BorderRadius.circular(12)),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.deepPurple),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          hintText: 'Email',
+                          fillColor: Colors.grey[200],
+                          filled: true,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+//name
+                // FadeInDown(
+                //   child: Container(
+                //     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                //     decoration: BoxDecoration(
+                //       color: Colors.white,
+                //       boxShadow: [
+                //         BoxShadow(
+                //             color: Color(0xffeeeeee),
+                //             blurRadius: 10,
+                //             offset: Offset(0, 4))
+                //       ],
+                //       borderRadius: BorderRadius.circular(8),
+                //       border: Border.all(
+                //         color: Colors.black.withOpacity(
+                //           0,
+                //         ),
+                //       ),
+                //     ),
+                //     child: Padding(
+                //       padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                //       child: TextField(
+                //         decoration: InputDecoration(
+                //           enabledBorder: OutlineInputBorder(
+                //               borderSide: BorderSide(color: Colors.white),
+                //               borderRadius: BorderRadius.circular(12)),
+                //           focusedBorder: OutlineInputBorder(
+                //             borderSide: BorderSide(color: Colors.deepPurple),
+                //             borderRadius: BorderRadius.circular(12),
+                //           ),
+                //           hintText: 'Name',
+                //           fillColor: Colors.grey[200],
+                //           filled: true,
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+
+                //phn
+                FadeInDown(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color(0xffeeeeee),
+                            blurRadius: 10,
+                            offset: Offset(0, 4))
+                      ],
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: Colors.black.withOpacity(
+                          0,
+                        ),
+                      ),
+                    ),
                     child: Stack(
                       children: [
                         InternationalPhoneNumberInput(
@@ -96,14 +173,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ),
                         ),
                         Positioned(
-                            left: 90,
-                            top: 8,
-                            bottom: 8,
-                            child: Container(
-                              height: 40,
-                              width: 1,
-                              color: Colors.black.withOpacity(0.13),
-                            ))
+                          left: 90,
+                          top: 8,
+                          bottom: 8,
+                          child: Container(
+                            height: 40,
+                            width: 1,
+                            color: Colors.black.withOpacity(0.13),
+                          ),
+                        )
                       ],
                     ),
                   ),

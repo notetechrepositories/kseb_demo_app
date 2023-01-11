@@ -47,7 +47,10 @@ class _otpScreenState extends State<otpScreen> {
                   child: TextFormField(
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
-                    inputFormatters: [LengthLimitingTextInputFormatter(1)],
+                    inputFormatters: [
+                      LengthLimitingTextInputFormatter(1),
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     style: TextStyle(color: Colors.black, fontSize: 30),
                     decoration:
                         InputDecoration(filled: true, fillColor: Colors.grey),
@@ -59,7 +62,10 @@ class _otpScreenState extends State<otpScreen> {
                   child: TextFormField(
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
-                    inputFormatters: [LengthLimitingTextInputFormatter(1)],
+                    inputFormatters: [
+                      LengthLimitingTextInputFormatter(1),
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     style: TextStyle(color: Colors.black, fontSize: 30),
                     decoration:
                         InputDecoration(filled: true, fillColor: Colors.grey),
@@ -71,7 +77,10 @@ class _otpScreenState extends State<otpScreen> {
                   child: TextFormField(
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
-                    inputFormatters: [LengthLimitingTextInputFormatter(1)],
+                    inputFormatters: [
+                      LengthLimitingTextInputFormatter(1),
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     style: TextStyle(color: Colors.black, fontSize: 30),
                     decoration:
                         InputDecoration(filled: true, fillColor: Colors.grey),
@@ -83,7 +92,10 @@ class _otpScreenState extends State<otpScreen> {
                   child: TextFormField(
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
-                    inputFormatters: [LengthLimitingTextInputFormatter(1)],
+                    inputFormatters: [
+                      LengthLimitingTextInputFormatter(1),
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     style: TextStyle(color: Colors.black, fontSize: 30),
                     decoration:
                         InputDecoration(filled: true, fillColor: Colors.grey),

@@ -17,17 +17,11 @@ class _otpScreenState extends State<otpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // centerTitle: true,
-        // leading: Icon(
-        //   Icons.arrow_back,
-        //   color: Colors.white,
-        // ),
         title: Text("Verify Screen"),
         backgroundColor: Colors.blue,
       ),
-      
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.6),
         child: Column(
           children: [
             Container(
@@ -41,7 +35,7 @@ class _otpScreenState extends State<otpScreen> {
               ),
             ),
             SizedBox(
-              height: 60,
+              height: 40,
             ),
             Form(
                 child: Row(
@@ -107,7 +101,14 @@ class _otpScreenState extends State<otpScreen> {
                       "Didnt Receive Otp",
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
-                    TextButton(onPressed: () {}, child: Text("Resend Otp"))
+                    TextButton(
+                        onPressed: () {
+                          // CircularProgressIndicator(
+                          //   valueColor:
+                          //       AlwaysStoppedAnimation<Color>(Colors.blue),
+                          // );
+                        },
+                        child: Text("Resend Otp"))
                   ],
                 ),
               ),

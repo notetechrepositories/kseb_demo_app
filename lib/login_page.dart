@@ -258,6 +258,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 25,
             ),
 
+
             //register button( not a member? register now)
 
             Row(
@@ -289,6 +290,19 @@ class _LoginPageState extends State<LoginPage> {
             // ),
           ]),
         ),
+
+          // )
+
+// registration page
+          // TextButton(
+          //   onPressed: () {
+          //     Navigator.push(context,
+          //         MaterialPageRoute(builder: ((context) => RegisterScreen())));
+          //   },
+          //   child: Text("Register Now"),
+          // ),
+        // ]),
+
       ),
     );
   }

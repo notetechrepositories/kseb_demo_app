@@ -224,7 +224,7 @@ class _LoginPageState extends State<LoginPage> {
                               if (formKey.currentState!.validate()) {
                                 final snackBar = SnackBar(
                                   content: Text(
-                                    'Submitting form',
+                                    'Sending OTP to the corresponding mail',
                                     style: TextStyle(
                                       color: Colors.green,
                                     ),

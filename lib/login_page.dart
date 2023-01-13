@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_animator/flutter_animator.dart';
@@ -210,47 +211,54 @@ class _LoginPageState extends State<LoginPage> {
                     color: Colors.deepPurple,
                     borderRadius: BorderRadius.circular(25)),
                 child: Center(
-                    child:
-                        // Text(
-                        //   'Sign In',
-                        //   style: TextStyle(
-                        //     color: Colors.white,
-                        //     fontWeight: FontWeight.bold,
-                        //     fontSize: 18,
-                        //   ),
-                        // ),
-                        TextButton(
-                            onPressed: () {
-                              if (formKey.currentState!.validate()) {
-                                final snackBar = SnackBar(
-                                  content: Text(
-                                    'Sending OTP to the corresponding mail',
-                                    style: TextStyle(
-                                      color: Colors.green,
-                                    ),
-                                  ),
-                                );
-                                ScaffoldMessenger.of(context)
-                                    .showSnackBar(snackBar);
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => otpScreen(),
-                                  ),
-                                );
-                                // _scaffoldKey.currentState!.(snackBar);
-                              }
+                  child:
+                      // Text(
+                      //   'Sign In',
+                      //   style: TextStyle(
+                      //     color: Colors.white,
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 18,
+                      //   ),
+                      // ),
+                      TextButton(
+                    onPressed: () {
+                      // FocusNode(
+                      //       onKey: (node, event) {
+                      //         if (event.isKeyPressed(LogicalKeyboardKey.enter))
+                      //           ;
+                      //       },
+                      //     );
+                      if (formKey.currentState!.validate()) {
+                        final snackBar = SnackBar(
+                          content: Text(
+                            'Sending OTP to the corresponding mail',
+                            style: TextStyle(
+                              color: Colors.green,
+                            ),
+                          ),
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => otpScreen(),
+                          ),
+                        );
+                        // _scaffoldKey.currentState!.(snackBar);
+                      }
 
-                              //old
-                            },
-                            child: Text(
-                              "Sign In",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              ),
-                            ))),
+                      //old
+                    },
+                    child: Text(
+                      "Sign In",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
 

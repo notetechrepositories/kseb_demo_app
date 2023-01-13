@@ -260,15 +260,15 @@ class _LoginPageState extends State<LoginPage> {
 
             //register button( not a member? register now)
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text(
-                  "Not a Member?",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: const [
+            //     Text(
+            //       "Not a Member?",
+            //       style: TextStyle(fontWeight: FontWeight.bold),
+            //     ),
+            //   ],
+            // ),
             // const Text(
             //   "Register now",
             //   style: TextStyle(

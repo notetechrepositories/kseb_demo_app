@@ -156,22 +156,22 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: TextFormField(
-                    decoration:
-                        const InputDecoration(labelText: "Enter Your Email"),
-                    validator: (value) {
-                      if (value!.isEmpty ||
-                          !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                              .hasMatch(value)) {
-                        return "Enter correct Email";
-                      } else {
-                        return null;
-                      }
-                    },
-                  ),
-                ),
+                // child: Padding(
+                //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                //   child: TextFormField(
+                //     decoration:
+                //         const InputDecoration(labelText: "Enter Your Email"),
+                //     validator: (value) {
+                //       if (value!.isEmpty ||
+                //           !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                //               .hasMatch(value)) {
+                //         return "Enter correct Email";
+                //       } else {
+                //         return null;
+                //       }
+                //     },
+                //   ),
+                // ),
               ),
             ),
             //name

@@ -18,10 +18,14 @@ class _ScreenHomeState extends State<ScreenHome> {
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
-        title: Text(
-          "Transformer Tracker",
-          style: GoogleFonts.lato(color: Colors.black),
+        title: Image.asset(
+          "assets/images/ttlogo.png",
+          height: 8.0,
         ),
+        // title: Text(
+        //   "Transformer Tracker",
+        //   style: GoogleFonts.lato(color: Colors.black),
+        // ),
         //    Column(
         //     mainAxisAlignment: MainAxisAlignment.center,
 

@@ -129,6 +129,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                             style: GoogleFonts.bebasNeue(fontSize: 20.0)),
                         subtitle: Text("Transformer",
                             style: GoogleFonts.roboto(fontSize: 20.0)),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                     ),
                     SizedBox(
@@ -165,6 +166,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                             style: GoogleFonts.bebasNeue(fontSize: 20.0)),
                         subtitle: Text("Inspection",
                             style: GoogleFonts.roboto(fontSize: 20.0)),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                     ),
                     SizedBox(
@@ -201,6 +203,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                             style: GoogleFonts.bebasNeue(fontSize: 20.0)),
                         subtitle: Text("Measurements",
                             style: GoogleFonts.roboto(fontSize: 20.0)),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                     ),
                     SizedBox(
@@ -236,6 +239,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                             style: GoogleFonts.bebasNeue(fontSize: 20.0)),
                         subtitle: Text("Maintenance",
                             style: GoogleFonts.roboto(fontSize: 20.0)),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                     ),
                     SizedBox(
@@ -271,6 +275,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                             style: GoogleFonts.bebasNeue(fontSize: 20.0)),
                         subtitle: Text("Approval Request",
                             style: GoogleFonts.roboto(fontSize: 20.0)),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                     ),
                     SizedBox(

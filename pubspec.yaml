@@ -57,6 +57,12 @@ flutter:
   assets:
     - assets/images/kseb.jpg
     - assets/images/ttlogo.png
+    - assets/images/climateZones.png
+    - assets/images/transformer.png
+    - assets/images/inspection.png
+    - assets/images/ruler.png
+    - assets/images/maintenance.png
+    - assets/images/file.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

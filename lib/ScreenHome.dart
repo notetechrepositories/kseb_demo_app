@@ -22,6 +22,13 @@ class _ScreenHomeState extends State<ScreenHome> {
           "assets/images/ttlogo.png",
           height: 50,
         ),
+        // centerTitle: true,
+        actions: <Widget>[
+          Image.asset(
+            "assets/images/climateZones.png",
+          )
+        ],
+
         // title: Text(
         //   "Transformer Tracker",
         //   style: GoogleFonts.lato(color: Colors.black),
@@ -39,7 +46,240 @@ class _ScreenHomeState extends State<ScreenHome> {
 
         //   ),
       ),
-      body: Container(),
+      body: SafeArea(
+        child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.white,
+            ),
+            child: ListView(
+              children: ListTile.divideTiles(
+                  //          <-- ListTile.divideTiles
+                  context: context,
+                  tiles: [
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 88, 88, 88),
+                              // offset: const Offset(
+                              //   5.0,
+                              //   5.0,
+                              // ),
+                              blurRadius: 20.0,
+                              // spreadRadius: 2.0,
+                            ), //BoxShadow
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: const Offset(0.0, 0.0),
+                              blurRadius: 0.0,
+                              spreadRadius: 0.0,
+                            ), //BoxShadow
+                          ],
+                          color: Color.fromARGB(255, 3, 42, 75),
+                          borderRadius: BorderRadius.circular(30)),
+                      child: ListTile(
+                        // leading: Text(""),
+                        title: Text(
+                          '\n    Hello, John Smith ',
+                          style: GoogleFonts.roboto(
+                              color: Colors.white, fontSize: 20.0),
+                        ),
+                        subtitle: Text(
+                            "     Assistant Engineer\n     Section Office\n\n ",
+                            style: GoogleFonts.roboto(
+                                color: Colors.white, fontSize: 15.0)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 88, 88, 88),
+                              // offset: const Offset(
+                              //   5.0,
+                              //   5.0,
+                              // ),
+                              blurRadius: 10.0,
+                              // spreadRadius: 2.0,
+                            ), //BoxShadow
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: const Offset(0.0, 0.0),
+                              blurRadius: 0.0,
+                              spreadRadius: 0.0,
+                            ), //BoxShadow
+                          ],
+                          color: Color.fromARGB(255, 255, 252, 252),
+                          borderRadius: BorderRadius.circular(300)),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage: AssetImage(
+                            "assets/images/transformer.png",
+                          ),
+                          backgroundColor: Color.fromARGB(255, 71, 21, 3),
+                        ),
+                        title: Text('3',
+                            style: GoogleFonts.bebasNeue(fontSize: 20.0)),
+                        subtitle: Text("Transformer",
+                            style: GoogleFonts.roboto(fontSize: 20.0)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 88, 88, 88),
+                              // offset: const Offset(
+                              //   5.0,
+                              //   5.0,
+                              // ),
+                              blurRadius: 10.0,
+                              // spreadRadius: 2.0,
+                            ), //BoxShadow
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: const Offset(0.0, 0.0),
+                              blurRadius: 0.0,
+                              spreadRadius: 0.0,
+                            ), //BoxShadow
+                          ],
+                          color: Color.fromARGB(255, 255, 252, 252),
+                          borderRadius: BorderRadius.circular(300)),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/inspection.png"),
+                          backgroundColor: Colors.orange,
+                        ),
+                        title: Text('0',
+                            style: GoogleFonts.bebasNeue(fontSize: 20.0)),
+                        subtitle: Text("Inspection",
+                            style: GoogleFonts.roboto(fontSize: 20.0)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 88, 88, 88),
+                              // offset: const Offset(
+                              //   5.0,
+                              //   5.0,
+                              // ),
+                              blurRadius: 10.0,
+                              // spreadRadius: 2.0,
+                            ), //BoxShadow
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: const Offset(0.0, 0.0),
+                              blurRadius: 0.0,
+                              spreadRadius: 0.0,
+                            ), //BoxShadow
+                          ],
+                          color: Color.fromARGB(255, 255, 252, 252),
+                          borderRadius: BorderRadius.circular(300)),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/ruler.png"),
+                          backgroundColor: Colors.green,
+                        ),
+                        title: Text('0',
+                            style: GoogleFonts.bebasNeue(fontSize: 20.0)),
+                        subtitle: Text("Measurements",
+                            style: GoogleFonts.roboto(fontSize: 20.0)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 88, 88, 88),
+                              // offset: const Offset(
+                              //   5.0,
+                              //   5.0,
+                              // ),
+                              blurRadius: 10.0,
+                              // spreadRadius: 2.0,
+                            ), //BoxShadow
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: const Offset(0.0, 0.0),
+                              blurRadius: 0.0,
+                              spreadRadius: 0.0,
+                            ), //BoxShadow
+                          ],
+                          color: Color.fromARGB(255, 255, 252, 252),
+                          borderRadius: BorderRadius.circular(300)),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/maintenance.png"),
+                        ),
+                        title: Text('1',
+                            style: GoogleFonts.bebasNeue(fontSize: 20.0)),
+                        subtitle: Text("Maintenance",
+                            style: GoogleFonts.roboto(fontSize: 20.0)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 88, 88, 88),
+                              // offset: const Offset(
+                              //   5.0,
+                              //   5.0,
+                              // ),
+                              blurRadius: 10.0,
+                              // spreadRadius: 2.0,
+                            ), //BoxShadow
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: const Offset(0.0, 0.0),
+                              blurRadius: 0.0,
+                              spreadRadius: 0.0,
+                            ), //BoxShadow
+                          ],
+                          color: Color.fromARGB(255, 255, 252, 252),
+                          borderRadius: BorderRadius.circular(300)),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage: AssetImage("assets/images/file.png"),
+                          backgroundColor: Colors.red,
+                        ),
+                        title: Text('0',
+                            style: GoogleFonts.bebasNeue(fontSize: 20.0)),
+                        subtitle: Text("Approval Request",
+                            style: GoogleFonts.roboto(fontSize: 20.0)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ]).toList(),
+            )),
+      ),
+      // Container(),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           items: const <BottomNavigationBarItem>[

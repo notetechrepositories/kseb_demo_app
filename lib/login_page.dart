@@ -172,38 +172,10 @@ class _LoginPageState extends State<LoginPage> {
                 //     },
                 //   ),
                 // ),
-              ),
-            ),
-            //name
-            SizedBox(
-              height: 10,
-            ),
-            //password textfield
-
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            //   child: TextField(
-            //     decoration: InputDecoration(
-            //       enabledBorder: OutlineInputBorder(
-            //           borderSide: BorderSide(color: Colors.white),
-            //           borderRadius: BorderRadius.circular(12)),
-            //       focusedBorder: OutlineInputBorder(
-            //         borderSide: BorderSide(color: Colors.deepPurple),
-            //         borderRadius: BorderRadius.circular(12),
-            //       ),
-            //       hintText: 'Password',
-            //       fillColor: Colors.grey[200],
-            //       filled: true,
-            //     ),
-            //     obscureText: true,
-            //   ),
-            // ),
-            SizedBox(
-              height: 10,
-            ),
+                
 
             //sign in button
-            Padding(
+            child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 padding: EdgeInsets.all(20),
@@ -262,6 +234,33 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
+              ),
+            ),
+            //name
+            SizedBox(
+              height: 10,
+            ),
+            //password textfield
+
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            //   child: TextField(
+            //     decoration: InputDecoration(
+            //       enabledBorder: OutlineInputBorder(
+            //           borderSide: BorderSide(color: Colors.white),
+            //           borderRadius: BorderRadius.circular(12)),
+            //       focusedBorder: OutlineInputBorder(
+            //         borderSide: BorderSide(color: Colors.deepPurple),
+            //         borderRadius: BorderRadius.circular(12),
+            //       ),
+            //       hintText: 'Password',
+            //       fillColor: Colors.grey[200],
+            //       filled: true,
+            //     ),
+            //     obscureText: true,
+            //   ),
+            // ),
+           
             SizedBox(
               height: 25,
             ),

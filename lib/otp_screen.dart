@@ -123,10 +123,10 @@ class _otpScreenState extends State<otpScreen> {
                     ),
                     TextButton(
                         onPressed: () {
-                          // CircularProgressIndicator(
-                          //   valueColor:
-                          //       AlwaysStoppedAnimation<Color>(Colors.blue),
-                          // );
+                          CircularProgressIndicator(
+                            valueColor:
+                                AlwaysStoppedAnimation<Color>(Colors.blue),
+                          );
                         },
                         child: Text("Resend Otp"))
                   ],

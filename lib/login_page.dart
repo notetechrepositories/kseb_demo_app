@@ -28,115 +28,124 @@ class _LoginPageState extends State<LoginPage> {
       body: Center(
         child: Form(
           key: formKey,
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Icon(
-              Icons.phone_android,
-              size: 100,
-            ),
-            //hello textfield
-
-            const SizedBox(
-              height: 75,
-            ),
-
-            Text(
-              "Hello Again!",
-              style: GoogleFonts.bebasNeue(
-                fontSize: 52,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Icon(
+                Icons.phone_android,
+                size: 100,
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+              //hello textfield
 
-            const Text(
-              "Welcome Back , You've been missed!",
-              style: TextStyle(
-                fontSize: 20,
+              const SizedBox(
+                height: 75,
               ),
-            ),
 
-            SizedBox(
-              height: 50,
-            ),
-
-            SizedBox(
-              height: 10,
-            ),
-
-            //phonenumber tetxfield
-            FadeInDown(
-                // child: Container(
-                //   padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                //   decoration: BoxDecoration(
-                //     color: Colors.white,
-                //     boxShadow: [
-                //       BoxShadow(
-                //           color: Color(0xffeeeeee),
-                //           blurRadius: 10,
-                //           offset: Offset(0, 4))
-                //     ],
-                //     borderRadius: BorderRadius.circular(8),
-                //     border: Border.all(
-                //       color: Colors.black.withOpacity(
-                //         0,
-                //       ),
-                //     ),
-                //   ),
-                child: Column(
-              children: [
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Phone Number',
-                    prefix: Padding(
-                      padding: EdgeInsets.all(4),
-                      child: Text('+91'),
-                    ),
-                  ),
-                  maxLength: 10,
-                  keyboardType: TextInputType.number,
-                  controller: _controller,
+              Text(
+                "Hello Again!",
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 52,
                 ),
-                
-              ],
-            )
-                //       Stack(
-                //         children: [
-                //           InternationalPhoneNumberInput(
-                //             onInputChanged: (value) {},
-                //             cursorColor: Colors.black,
-                //             formatInput: false,
-                //             selectorConfig: SelectorConfig(
-                //                 selectorType:
-                //                     PhoneInputSelectorType.BOTTOM_SHEET),
-                //             inputDecoration: InputDecoration(
-                //               contentPadding:
-                //                   EdgeInsets.only(bottom: 15, left: 0),
-                //               border: InputBorder.none,
-                //               hintText: "phone number",
-                //               hintStyle: TextStyle(
-                //                   color: Colors.grey.shade500, fontSize: 16),
-                //             ),
-                            
-                          // ),
-                //           Positioned(
-                //             left: 90,
-                //             top: 8,
-                //             bottom: 8,
-                //             child: Container(
-                //               height: 40,
-                //               width: 1,
-                //               color: Colors.black.withOpacity(0.13),
-                //             ),
-                //           )
-                //         ],
-                //       ),
-                //     ],
-                //   ),
-                // ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+
+              const Text(
+                "Welcome Back , You've been missed!",
+                style: TextStyle(
+                  fontSize: 20,
                 ),
-            FadeInDown(
-              child: Container(
+              ),
+
+              SizedBox(
+                height: 50,
+              ),
+
+              SizedBox(
+                height: 10,
+              ),
+
+              //phonenumber tetxfield
+              // FadeInDown (
+              // child: Container(
+              // padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+              // decoration: BoxDecoration(
+              //   color: Colors.white,
+              //   boxShadow: [
+              //     BoxShadow(
+              //         color: Color(0xffeeeeee),
+              //         blurRadius: 10,
+              //         offset: Offset(0, 4))
+              //   ],
+              //   borderRadius: BorderRadius.circular(8),
+              //   border: Border.all(
+              //     color: Colors.black.withOpacity(
+              //       0,
+              //     ),
+              //   ),
+              // ),
+              // child: Column(
+              // children: [
+              //   TextFormField(
+              //     decoration: InputDecoration(
+              //       hintText: 'Phone Number',
+              //       prefix: Padding(
+              //         padding: EdgeInsets.all(4),
+              //         child: Text('+91'),
+              //       ),
+              //     ),
+              //     maxLength: 10,
+              //     keyboardType: TextInputType.number,
+              //     controller: _controller,
+              //     validator: (value) {
+              //       if (value!.isEmpty ||
+              //           !RegExp(r'^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$')
+              //               .hasMatch(value)) {
+              //         return "Enter Valid Number";
+              //       } else {
+              //         return null;
+              //       }
+              //     },
+              //   ),
+              // ],
+              // )
+              //       Stack(
+              //         children: [
+              //           InternationalPhoneNumberInput(
+              //             onInputChanged: (value) {},
+              //             cursorColor: Colors.black,
+              //             formatInput: false,
+              //             selectorConfig: SelectorConfig(
+              //                 selectorType:
+              //                     PhoneInputSelectorType.BOTTOM_SHEET),
+              //             inputDecoration: InputDecoration(
+              //               contentPadding:
+              //                   EdgeInsets.only(bottom: 15, left: 0),
+              //               border: InputBorder.none,
+              //               hintText: "phone number",
+              //               hintStyle: TextStyle(
+              //                   color: Colors.grey.shade500, fontSize: 16),
+              //             ),
+
+              // ),
+              //           Positioned(
+              //             left: 90,
+              //             top: 8,
+              //             bottom: 8,
+              //             child: Container(
+              //               height: 40,
+              //               width: 1,
+              //               color: Colors.black.withOpacity(0.13),
+              //             ),
+              //           )
+              //         ],
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // ),
+              Container(
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -153,59 +162,110 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-
-                //sign in button
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: FadeInDown(
                   child: Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(25)),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          if (formKey.currentState!.validate()) {
-                            final snackBar = SnackBar(
-                              content: Text(
-                                'Sending OTP to the corresponding mail',
-                                style: TextStyle(
-                                  color: Colors.green,
+                    child: Column(
+                      children: [
+                        TextFormField(
+                          decoration: InputDecoration(
+                            hintText: 'Phone Number',
+                            prefix: Padding(
+                              padding: EdgeInsets.all(4),
+                              child: Text('+91'),
+                            ),
+                          ),
+                          maxLength: 10,
+                          keyboardType: TextInputType.number,
+                          controller: _controller,
+                          validator: (value) {
+                            if (value!.isEmpty ||
+                                !RegExp(r'^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$')
+                                    .hasMatch(value)) {
+                              return "Enter Valid Number";
+                            } else {
+                              return null;
+                            }
+                          },
+                        ),
+                        Container(
+                          // padding:
+                          //     EdgeInsets.symmetric(horizontal: 15, vertical: 105),
+                          // decoration: BoxDecoration(
+                          //   color: Colors.white,
+                          //   boxShadow: [
+                          //     BoxShadow(
+                          //         color: Colors.black,
+                          //         blurRadius: 10,
+                          //         offset: Offset(0, 4))
+                          //   ],
+                          //   borderRadius: BorderRadius.circular(8),
+                          //   border: Border.all(
+                          //     color: Colors.black.withOpacity(
+                          //       0,
+                          //     ),
+                          //   ),
+                          // ),
+
+                          //sign in button
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Container(
+                              padding: EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                  color: Colors.deepPurple,
+                                  borderRadius: BorderRadius.circular(25)),
+                              child: Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      if (formKey.currentState!.validate()) {
+                                        final snackBar = SnackBar(
+                                          content: Text(
+                                            'Sending OTP to the corresponding mail',
+                                            style: TextStyle(
+                                              color: Colors.green,
+                                            ),
+                                          ),
+                                        );
+
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                otpScreen(_controller.text),
+                                          ),
+                                        );
+                                      }
+
+                                      //old
+                                    },
+                                    child: Text(
+                                      "Sign In",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            );
-
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(snackBar);
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    otpScreen(_controller.text),
-                              ),
-                            );
-                          }
-
-                          //old
-                        },
-                        child: Text(
-                          "Sign In",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                 ),
               ),
-            ),
-            //name
-            SizedBox(
-              height: 10,
-            ),
-          ]),
+              //name
+              SizedBox(
+                height: 10,
+              ),
+            ],
+          ),
         ),
 
         // )

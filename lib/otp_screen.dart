@@ -8,7 +8,10 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'ScreenHome.dart';
 
 class otpScreen extends StatefulWidget {
-  const otpScreen({super.key});
+  final String phone;
+
+  // const otpScreen({super.key, required this.phone});
+  const otpScreen(this.phone, {super.key});
 
   @override
   State<otpScreen> createState() => _otpScreenState();
@@ -23,7 +26,7 @@ class _otpScreenState extends State<otpScreen> {
         backgroundColor: Colors.blue,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.6),
+        padding: const EdgeInsets.all(70.20),
         child: Column(
           children: [
             Container(
@@ -31,7 +34,7 @@ class _otpScreenState extends State<otpScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  "Otp sent to 9072405777",
+                  "\n Otp sent to ${widget.phone}",
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
               ),
@@ -41,7 +44,7 @@ class _otpScreenState extends State<otpScreen> {
             ),
             Form(
                 child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SizedBox(
                   width: 64,
@@ -53,24 +56,27 @@ class _otpScreenState extends State<otpScreen> {
                       LengthLimitingTextInputFormatter(1),
                       FilteringTextInputFormatter.digitsOnly
                     ],
-                    style: TextStyle(color: Colors.black, fontSize: 30),
+                    style: TextStyle(color: Colors.black, fontSize: 20),
                     decoration:
                         InputDecoration(filled: true, fillColor: Colors.grey),
                   ),
                 ),
-                SizedBox(
-                  width: 64,
-                  height: 68,
-                  child: TextFormField(
-                    textAlign: TextAlign.center,
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      LengthLimitingTextInputFormatter(1),
-                      FilteringTextInputFormatter.digitsOnly
-                    ],
-                    style: TextStyle(color: Colors.black, fontSize: 30),
-                    decoration:
-                        InputDecoration(filled: true, fillColor: Colors.grey),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: 64,
+                    height: 68,
+                    child: TextFormField(
+                      textAlign: TextAlign.center,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly
+                      ],
+                      style: TextStyle(color: Colors.black, fontSize: 30),
+                      decoration:
+                          InputDecoration(filled: true, fillColor: Colors.grey),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -131,7 +137,7 @@ class _otpScreenState extends State<otpScreen> {
         ),
       ),
       bottomSheet: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(8),
           child: ElevatedButton(
             onPressed: () {
               Navigator.push(context,

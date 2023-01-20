@@ -34,8 +34,8 @@ class _otpScreenState extends State<otpScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  "\n Otp sent to ${widget.phone}",
-                  style: TextStyle(color: Colors.black, fontSize: 20),
+                  "\n\n Otp sent to ${widget.phone}",
+                  style: TextStyle(color: Colors.black, fontSize: 30),
                 ),
               ),
             ),
@@ -44,28 +44,31 @@ class _otpScreenState extends State<otpScreen> {
             ),
             Form(
                 child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  width: 64,
-                  height: 68,
-                  child: TextFormField(
-                    textAlign: TextAlign.center,
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      LengthLimitingTextInputFormatter(1),
-                      FilteringTextInputFormatter.digitsOnly
-                    ],
-                    style: TextStyle(color: Colors.black, fontSize: 20),
-                    decoration:
-                        InputDecoration(filled: true, fillColor: Colors.grey),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: 45,
+                    height: 45,
+                    child: TextFormField(
+                      textAlign: TextAlign.center,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly
+                      ],
+                      style: TextStyle(color: Colors.black, fontSize: 20),
+                      decoration:
+                          InputDecoration(filled: true, fillColor: Colors.grey),
+                    ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SizedBox(
-                    width: 64,
-                    height: 68,
+                    width: 45,
+                    height: 45,
                     child: TextFormField(
                       textAlign: TextAlign.center,
                       keyboardType: TextInputType.number,
@@ -80,8 +83,8 @@ class _otpScreenState extends State<otpScreen> {
                   ),
                 ),
                 SizedBox(
-                  width: 64,
-                  height: 68,
+                  width: 45,
+                  height: 45,
                   child: TextFormField(
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
@@ -94,19 +97,22 @@ class _otpScreenState extends State<otpScreen> {
                         InputDecoration(filled: true, fillColor: Colors.grey),
                   ),
                 ),
-                SizedBox(
-                  width: 64,
-                  height: 68,
-                  child: TextFormField(
-                    textAlign: TextAlign.center,
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      LengthLimitingTextInputFormatter(1),
-                      FilteringTextInputFormatter.digitsOnly
-                    ],
-                    style: TextStyle(color: Colors.black, fontSize: 30),
-                    decoration:
-                        InputDecoration(filled: true, fillColor: Colors.grey),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: 45,
+                    height: 45,
+                    child: TextFormField(
+                      textAlign: TextAlign.center,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly
+                      ],
+                      style: TextStyle(color: Colors.black, fontSize: 30),
+                      decoration:
+                          InputDecoration(filled: true, fillColor: Colors.grey),
+                    ),
                   ),
                 )
               ],
@@ -118,7 +124,7 @@ class _otpScreenState extends State<otpScreen> {
                 child: Column(
                   children: [
                     Text(
-                      "Didnt Receive Otp",
+                      "Didn't Receive Otp",
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     TextButton(

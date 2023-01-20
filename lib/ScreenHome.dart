@@ -73,14 +73,14 @@ class _ScreenHomeState extends State<ScreenHome> {
                               // spreadRadius: 2.0,
                             ), //BoxShadow
                             BoxShadow(
-                              color: Colors.white,
+                              color: Colors.black,
                               offset: const Offset(0.0, 0.0),
                               blurRadius: 0.0,
                               spreadRadius: 0.0,
                             ), //BoxShadow
                           ],
                           color: Color.fromARGB(255, 3, 42, 75),
-                          borderRadius: BorderRadius.circular(30)),
+                          borderRadius: BorderRadius.all(Radius.circular(40))),
                       child: ListTile(
                         // leading: Text(""),
                         title: Text(

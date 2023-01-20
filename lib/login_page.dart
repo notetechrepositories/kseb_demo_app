@@ -146,16 +146,16 @@ class _LoginPageState extends State<LoginPage> {
               // ),
               // ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
-                        color: Color(0xffeeeeee),
-                        blurRadius: 10,
-                        offset: Offset(0, 4))
+                        color: Colors.black,
+                        blurRadius: 7,
+                        offset: Offset(0, 2)),
                   ],
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(30),
                   border: Border.all(
                     color: Colors.black.withOpacity(
                       0,
@@ -163,91 +163,92 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 child: FadeInDown(
-                  child: Container(
-                    child: Column(
-                      children: [
-                        TextFormField(
-                          decoration: InputDecoration(
-                            hintText: 'Phone Number',
-                            prefix: Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Text('+91'),
-                            ),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Phone Number',
+                          prefix: Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Text('+91'),
                           ),
-                          maxLength: 10,
-                          keyboardType: TextInputType.number,
-                          controller: _controller,
-                          validator: (value) {
-                            if (value!.isEmpty ||
-                                !RegExp(r'^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$')
-                                    .hasMatch(value)) {
-                              return "Enter Valid Number";
-                            } else {
-                              return null;
-                            }
-                          },
                         ),
-                        Container(
-                          // padding:
-                          //     EdgeInsets.symmetric(horizontal: 15, vertical: 105),
-                          // decoration: BoxDecoration(
-                          //   color: Colors.white,
-                          //   boxShadow: [
-                          //     BoxShadow(
-                          //         color: Colors.black,
-                          //         blurRadius: 10,
-                          //         offset: Offset(0, 4))
-                          //   ],
-                          //   borderRadius: BorderRadius.circular(8),
-                          //   border: Border.all(
-                          //     color: Colors.black.withOpacity(
-                          //       0,
-                          //     ),
-                          //   ),
-                          // ),
+                        maxLength: 10,
+                        keyboardType: TextInputType.number,
+                        inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly
+                        ],
+                        controller: _controller,
+                        validator: (value) {
+                          if (value!.isEmpty ||
+                              !RegExp(r'^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$')
+                                  .hasMatch(value)) {
+                            return "Enter Valid Number";
+                          } else {
+                            return null;
+                          }
+                        },
+                      ),
+                      Container(
+                        // padding:
+                        //     EdgeInsets.symmetric(horizontal: 15, vertical: 105),
+                        // decoration: BoxDecoration(
+                        //   color: Colors.white,
+                        //   boxShadow: [
+                        //     BoxShadow(
+                        //         color: Colors.black,
+                        //         blurRadius: 10,
+                        //         offset: Offset(0, 4))
+                        //   ],
+                        //   borderRadius: BorderRadius.circular(8),
+                        //   border: Border.all(
+                        //     color: Colors.black.withOpacity(
+                        //       0,
+                        //     ),
+                        //   ),
+                        // ),
 
-                          //sign in button
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Container(
-                              padding: EdgeInsets.all(20),
-                              decoration: BoxDecoration(
-                                  color: Colors.deepPurple,
-                                  borderRadius: BorderRadius.circular(25)),
-                              child: Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: TextButton(
-                                    onPressed: () {
-                                      if (formKey.currentState!.validate()) {
-                                        final snackBar = SnackBar(
-                                          content: Text(
-                                            'Sending OTP to the corresponding mail',
-                                            style: TextStyle(
-                                              color: Colors.green,
-                                            ),
+                        //sign in button
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Container(
+                            padding: EdgeInsets.all(20),
+                            decoration: BoxDecoration(
+                                color: Colors.deepPurple,
+                                borderRadius: BorderRadius.circular(25)),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: TextButton(
+                                  onPressed: () {
+                                    if (formKey.currentState!.validate()) {
+                                      final snackBar = SnackBar(
+                                        content: Text(
+                                          'Sending OTP to the corresponding mail',
+                                          style: TextStyle(
+                                            color: Colors.green,
                                           ),
-                                        );
+                                        ),
+                                      );
 
-                                        ScaffoldMessenger.of(context)
-                                            .showSnackBar(snackBar);
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                otpScreen(_controller.text),
-                                          ),
-                                        );
-                                      }
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(snackBar);
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              otpScreen(_controller.text),
+                                        ),
+                                      );
+                                    }
 
-                                      //old
-                                    },
-                                    child: Text(
-                                      "Sign In",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                      ),
+                                    //old
+                                  },
+                                  child: Text(
+                                    "Sign In",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
                                     ),
                                   ),
                                 ),
@@ -255,8 +256,8 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),

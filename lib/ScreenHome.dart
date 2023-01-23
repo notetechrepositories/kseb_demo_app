@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -61,6 +63,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                       height: 40,
                     ),
                     Container(
+                      margin: const EdgeInsets.only(left: 15, right: 15),
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -80,7 +83,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                             ), //BoxShadow
                           ],
                           color: Color.fromARGB(255, 3, 42, 75),
-                          borderRadius: BorderRadius.all(Radius.circular(40))),
+                          borderRadius: BorderRadius.circular(20)),
                       child: ListTile(
                         // leading: Text(""),
                         title: Text(
@@ -98,6 +101,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                       height: 40,
                     ),
                     Container(
+                      margin: const EdgeInsets.only(left: 15, right: 15),
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -120,9 +124,8 @@ class _ScreenHomeState extends State<ScreenHome> {
                           borderRadius: BorderRadius.circular(300)),
                       child: ListTile(
                         leading: CircleAvatar(
-                          backgroundImage: AssetImage(
-                            "assets/images/transformer.png",
-                          ),
+                          backgroundImage:
+                              AssetImage("assets/images/transformer.png"),
                           backgroundColor: Color.fromARGB(255, 71, 21, 3),
                         ),
                         title: Text('3',
@@ -136,6 +139,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                       height: 20,
                     ),
                     Container(
+                      margin: const EdgeInsets.only(left: 15, right: 15),
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -173,6 +177,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                       height: 20,
                     ),
                     Container(
+                      margin: const EdgeInsets.only(left: 15, right: 15),
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -210,6 +215,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                       height: 20,
                     ),
                     Container(
+                      margin: const EdgeInsets.only(left: 15, right: 15),
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -246,6 +252,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                       height: 20,
                     ),
                     Container(
+                      margin: const EdgeInsets.only(left: 15, right: 15),
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(

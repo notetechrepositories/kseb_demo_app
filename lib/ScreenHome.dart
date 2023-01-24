@@ -124,8 +124,9 @@ class _ScreenHomeState extends State<ScreenHome> {
                           borderRadius: BorderRadius.circular(300)),
                       child: ListTile(
                         leading: CircleAvatar(
-                          backgroundImage:
-                              AssetImage("assets/images/transformer.png"),
+                          backgroundImage: AssetImage(
+                            "assets/images/transformer.png",
+                          ),
                           backgroundColor: Color.fromARGB(255, 71, 21, 3),
                         ),
                         title: Text('3',

@@ -17,6 +17,7 @@ class _ScreenHomeState extends State<ScreenHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
@@ -52,7 +53,7 @@ class _ScreenHomeState extends State<ScreenHome> {
         child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              color: Color.fromARGB(255, 66, 41, 41),
             ),
             child: ListView(
               children: ListTile.divideTiles(
@@ -127,7 +128,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                           backgroundImage: AssetImage(
                             "assets/images/transformer.png",
                           ),
-                          backgroundColor: Color.fromARGB(255, 71, 21, 3),
+                          // backgroundColor: Color.fromARGB(255, 71, 21, 3),
                         ),
                         title: Text('3',
                             style: GoogleFonts.bebasNeue(fontSize: 20.0)),

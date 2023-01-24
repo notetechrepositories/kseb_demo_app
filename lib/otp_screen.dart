@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
+import 'ScreenHome.dart';
+
 // class VerifyOTPScreen extends StatefulWidget {
 //   const VerifyOTPScreen({Key? key}) : super(key: key);
 class VerifyOTPScreen extends StatefulWidget {
@@ -45,37 +47,66 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> with CodeAutoFill {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Verify Screen"),
+        backgroundColor: Colors.blue,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Center(
-              child: PinFieldAutoFill(
-                currentCode: codeValue,
-                codeLength: 4,
-                onCodeChanged: (code) {
-                  print("onCodeChanged $code");
-                  setState(() {
-                    codeValue = code.toString();
-                  });
-                },
-                onCodeSubmitted: (val) {
-                  print("onCodeSubmitted $val");
-                },
-              ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      "\n\n Otp sent to ${widget.phone}",
+                      style: TextStyle(color: Colors.black, fontSize: 26),
+                    ),
+                  ),
+                ),
+                Form(
+                  child: Center(
+                    child: PinFieldAutoFill(
+                      currentCode: codeValue,
+                      codeLength: 4,
+                      onCodeChanged: (code) {
+                        print("onCodeChanged $code");
+                        setState(() {
+                          codeValue = code.toString();
+                        });
+                      },
+                      onCodeSubmitted: (val) {
+                        print("onCodeSubmitted $val");
+                      },
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: ElevatedButton(
+                      onPressed: () {
+                        print(codeValue);
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: ((context) => ScreenHome())));
+                      },
+                      child: const Text("Verify OTP")),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Center(
+                    child: ElevatedButton(
+                        onPressed: listenOtp, child: const Text("Resend")))
+              ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  print(codeValue);
-                },
-                child: const Text("Verify OTP")),
-            ElevatedButton(onPressed: listenOtp, child: const Text("Resend"))
-          ],
+          ),
         ),
       ),
     );
@@ -122,24 +153,24 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> with CodeAutoFill {
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("Verify Screen"),
-//         backgroundColor: Colors.blue,
-//       ),
-//       body: Padding(
-//         padding: const EdgeInsets.all(70.20),
-//         child: Column(
-//           children: [
-//             Container(
-//               alignment: Alignment.center,
-//               child: Padding(
-//                 padding: const EdgeInsets.all(10.0),
-//                 child: Text(
-//                   "\n\n Otp sent to ${widget.phone}",
-//                   style: TextStyle(color: Colors.black, fontSize: 30),
-//                 ),
-//               ),
-//             ),
+      // appBar: AppBar(
+        // title: Text("Verify Screen"),
+        // backgroundColor: Colors.blue,
+      // ),
+      // body: Padding(
+      //   padding: const EdgeInsets.all(70.20),
+      //   child: Column(
+      //     children: [
+      //       Container(
+              // alignment: Alignment.center,
+              // child: Padding(
+              //   padding: const EdgeInsets.all(10.0),
+              //   child: Text(
+              //     "\n\n Otp sent to ${widget.phone}",
+              //     style: TextStyle(color: Colors.black, fontSize: 30),
+              //   ),
+              // ),
+      //       ),
 //             SizedBox(
 //               height: 40,
 //             ),

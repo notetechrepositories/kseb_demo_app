@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
             //hello textfield
 
             const SizedBox(
-              height: 75,
+              height: 75.0,
             ),
 
             Text(
@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 30,
             ),
 
             const Text(
@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
             SizedBox(
-              height: 50,
+              height: 320,
             ),
 
             //email textfield
@@ -172,68 +172,67 @@ class _LoginPageState extends State<LoginPage> {
                 //     },
                 //   ),
                 // ),
-                
 
-            //sign in button
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Container(
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                    color: Colors.deepPurple,
-                    borderRadius: BorderRadius.circular(25)),
-                child: Center(
-                  child:
-                      // Text(
-                      //   'Sign In',
-                      //   style: TextStyle(
-                      //     color: Colors.white,
-                      //     fontWeight: FontWeight.bold,
-                      //     fontSize: 18,
-                      //   ),
-                      // ),
-                      TextButton(
-                    onPressed: () {
-                      // FocusNode(
-                      //       onKey: (node, event) {
-                      //         if (event.isKeyPressed(LogicalKeyboardKey.enter))
-                      //           ;
-                      //       },
-                      //     );
-                      if (formKey.currentState!.validate()) {
-                        final snackBar = SnackBar(
-                          content: Text(
-                            'Sending OTP to the corresponding mail',
-                            style: TextStyle(
-                              color: Colors.green,
-                            ),
-                          ),
-                        );
-                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => otpScreen(),
-                          ),
-                        );
-                        // _scaffoldKey.currentState!.(snackBar);
-                      }
+                //sign in button
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Colors.deepPurple,
+                        borderRadius: BorderRadius.circular(25)),
+                    child: Center(
+                      child:
+                          // Text(
+                          //   'Sign In',
+                          //   style: TextStyle(
+                          //     color: Colors.white,
+                          //     fontWeight: FontWeight.bold,
+                          //     fontSize: 18,
+                          //   ),
+                          // ),
+                          TextButton(
+                        onPressed: () {
+                          // FocusNode(
+                          //       onKey: (node, event) {
+                          //         if (event.isKeyPressed(LogicalKeyboardKey.enter))
+                          //           ;
+                          //       },
+                          //     );
+                          if (formKey.currentState!.validate()) {
+                            final snackBar = SnackBar(
+                              content: Text(
+                                'Sending OTP to the corresponding mail',
+                                style: TextStyle(
+                                  color: Colors.green,
+                                ),
+                              ),
+                            );
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => otpScreen(),
+                              ),
+                            );
+                            // _scaffoldKey.currentState!.(snackBar);
+                          }
 
-                      //old
-                    },
-                    child: Text(
-                      "Sign In",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                          //old
+                        },
+                        child: Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ),
-
               ),
             ),
             //name
@@ -260,7 +259,7 @@ class _LoginPageState extends State<LoginPage> {
             //     obscureText: true,
             //   ),
             // ),
-           
+
             SizedBox(
               height: 25,
             ),
@@ -312,3 +311,4 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+

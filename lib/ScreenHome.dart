@@ -53,7 +53,7 @@ class _ScreenHomeState extends State<ScreenHome> {
         child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Color.fromARGB(255, 66, 41, 41),
+              color: Color.fromARGB(255, 212, 212, 212),
             ),
             child: ListView(
               children: ListTile.divideTiles(

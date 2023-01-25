@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 import 'ScreenHome.dart';
@@ -74,6 +75,11 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> with CodeAutoFill {
                     child: PinFieldAutoFill(
                       currentCode: codeValue,
                       codeLength: 4,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        // LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly
+                      ],
                       onCodeChanged: (code) {
                         print("onCodeChanged $code");
                         setState(() {
@@ -188,10 +194,10 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> with CodeAutoFill {
 //             //         child: TextFormField(
 //             //           textAlign: TextAlign.center,
 //             //           keyboardType: TextInputType.number,
-//             //           inputFormatters: [
-//             //             LengthLimitingTextInputFormatter(1),
-//             //             FilteringTextInputFormatter.digitsOnly
-//             //           ],
+                      // inputFormatters: [
+                      //   LengthLimitingTextInputFormatter(1),
+                      //   FilteringTextInputFormatter.digitsOnly
+                      // ],
 //             //           style: TextStyle(color: Colors.black, fontSize: 30),
 //             //           decoration:
 //             //               InputDecoration(filled: true, fillColor: Colors.grey),

@@ -64,6 +64,8 @@ flutter:
     - assets/images/ruler.png
     - assets/images/maintenance.png
     - assets/images/file.png
+    - assets/images/9dcf525c-0f01-4f62-bb75-02381a22a4b2.jpg
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

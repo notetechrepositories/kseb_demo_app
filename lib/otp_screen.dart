@@ -23,19 +23,19 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> with CodeAutoFill {
     });
   }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    listenOtp();
-  }
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   listenOtp();
+  // }
 
-  void listenOtp() async {
-    await SmsAutoFill().unregisterListener();
-    listenForCode();
-    await SmsAutoFill().listenForCode;
-    print("OTP listen Called");
-  }
+  // void listenOtp() async {
+  //   await SmsAutoFill().unregisterListener();
+  //   listenForCode();
+  //   await SmsAutoFill().listenForCode;
+  //   print("OTP listen Called");
+  // }
 
   @override
   void dispose() {

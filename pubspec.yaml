@@ -35,10 +35,10 @@ dependencies:
   flutter_animator: ^3.2.2
   google_fonts: null
   intl_phone_number_input: ^0.7.1
-  
+  shared_preferences: ^2.0.17
   shared_value: ^3.0.0
- 
   sms_autofill: ^2.2.0
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -65,7 +65,6 @@ flutter:
     - assets/images/maintenance.png
     - assets/images/file.png
     - assets/images/9dcf525c-0f01-4f62-bb75-02381a22a4b2.jpg
-    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -6,6 +8,7 @@ import 'package:flutter_animator/flutter_animator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:ksec_login/otp_screen.dart';
+import 'package:http/http.dart' as http;
 
 import 'ScreenHome.dart';
 import 'register.dart';
@@ -146,7 +149,7 @@ class _LoginPageState extends State<LoginPage> {
               // ),
               // ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: const [
@@ -214,12 +217,12 @@ class _LoginPageState extends State<LoginPage> {
                           child: Container(
                             padding: EdgeInsets.all(20),
                             decoration: BoxDecoration(
-                                color: Colors.deepPurple,
+                                // color: Colors.deepPurple,
                                 borderRadius: BorderRadius.circular(25)),
                             child: Center(
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: TextButton(
+                                child: ElevatedButton(
                                   onPressed: () {
                                     if (formKey.currentState!.validate()) {
                                       final snackBar = SnackBar(
@@ -243,14 +246,24 @@ class _LoginPageState extends State<LoginPage> {
 
                                     //old
                                   },
-                                  child: Text(
-                                    "Sign In",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 100, vertical: 15),
+                                    child: Text(
+                                      "Sign In",
                                     ),
                                   ),
+                                  style: ElevatedButton.styleFrom(
+                                      foregroundColor: Colors.white,
+                                      backgroundColor: Colors.purple,
+                                      textStyle: TextStyle(fontSize: 25)
+
+                                      // TextStyle(
+                                      //   color: Colors.white,
+                                      //   fontWeight: FontWeight.bold,
+                                      //   fontSize: 18,
+                                      // ),
+                                      ),
                                 ),
                               ),
                             ),
@@ -273,4 +286,14 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
+  // Future<void> getNumberFact(String phone) async {
+  //   final _response =
+  //       await http.get(Uri.parse('https://localhost:7015/rest/prd/v1/user'));
+  //   print('result= ' + _response.body);
+  //   setState(() {
+  //     _isloading = false;
+  //   });
+
+  // }
 }
